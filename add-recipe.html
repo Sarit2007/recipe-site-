@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>הוספת מתכון | המתכון המנצח</title>
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/add-recipe.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="../index.html">המתכון המנצח</a>
+        </div>
+
+        <nav>
+            <a href="../index.html">דף הבית</a>
+            <a href="recipes.html">מתכונים</a>
+            <a href="add-recipe.html" class="active">הוספת מתכון</a>
+            <a href="about.html">אודות</a>
+            <a href="contact.html">צור קשר</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <form action="success.html" method="get">
+
+            <h1>הוספת מתכון</h1>
+
+            <!-- שם המתכון -->
+            <div class="field">
+                <label for="title">שם המתכון</label>
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    placeholder="למשל: עוגת תפוחים"
+                    required>
+            </div>
+
+                <!-- רמת קושי -->
+                <div class="field">
+                    <fieldset>
+                        <legend>רמת קושי</legend>
+
+                        <div class="options">
+
+                            <label class="option">
+                                <input type="radio" name="difficulty" value="easy" required>
+                                קל
+                            </label>
+
+                            <label class="option">
+                                <input type="radio" name="difficulty" value="medium">
+                                בינוני
+                            </label>
+
+                            <label class="option">
+                                <input type="radio" name="difficulty" value="hard">
+                                קשה
+                            </label>
+
+                        </div>
+                    </fieldset>
+                </div>
+
+            <!-- זמן הכנה וכמות מנות -->
+            <div class="row">
+
+                <div class="field">
+                    <label for="time">זמן הכנה</label>
+                    <input
+                        type="time"
+                        id="time"
+                        name="time"
+                        value="00:10"
+                        max="05:00"
+                        required>
+                </div>
+
+                <div class="field">
+                    <label for="servings">מספר מנות</label>
+                    <input
+                        type="number"
+                        id="servings"
+                        name="servings"
+                        min="1"
+                        max="50"
+                        value="4"
+                        required>
+                </div>
+
+            </div>
+
+            <!-- מצרכים -->
+            <div class="field">
+                <label for="ingredients">מצרכים</label>
+                <textarea
+                    id="ingredients"
+                    name="ingredients"
+                    rows="5"
+                    required></textarea>
+            </div>
+
+            <!-- אופן ההכנה -->
+            <div class="field">
+                <label for="steps">אופן ההכנה</label>
+                <textarea
+                    id="steps"
+                    name="steps"
+                    rows="6"
+                    required></textarea>
+            </div>
+
+            <!-- תמונת המתכון -->
+            <div class="field">
+                <label for="img">תמונה של המנה</label>
+                <input
+                    type="file"
+                    id="img"
+                    name="img"
+                    accept="image/*">
+            </div>
+
+            <!-- כפתורים -->
+            <button type="reset">איפוס הטופס</button>
+            <button type="submit">שמירת המתכון</button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <a href="about.html">אודות האתר</a>
+        <p>המתכון המנצח © כל הזכויות שמורות 2026</p>
+    </footer>
+
+</body>
+</html>

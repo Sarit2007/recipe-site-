@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>צור קשר | המתכון המנצח</title>
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="../index.html">המתכון המנצח</a>
+        </div>
+
+        <nav>
+            <a href="../index.html">דף הבית</a>
+            <a href="recipes.html">מתכונים</a>
+            <a href="add-recipe.html">הוספת מתכון</a>
+            <a href="about.html">אודות</a>
+            <a href="contact.html" class="active">צור קשר</a>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+
+        <section class="contact-intro">
+            <h1>צור קשר</h1>
+            <p>
+                יש לכם שאלה, הצעה או רעיון למתכון חדש?
+                נשמח לשמוע מכם!
+            </p>
+        </section>
+
+        <form action="#" method="get">
+
+            <h2>שליחת הודעה</h2>
+
+            <div class="field">
+                <label for="name">שם מלא</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="הכניסו את שמכם"
+                    required>
+            </div>
+
+            <div class="field">
+                <label for="email">כתובת דוא"ל</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@email.com"
+                    required>
+            </div>
+
+            <div class="field">
+                <label for="subject">נושא הפנייה</label>
+                <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="במה נוכל לעזור?"
+                    required>
+            </div>
+
+            <div class="field">
+                <label for="message">תוכן ההודעה</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="כתבו כאן את הודעתכם..."
+                    required></textarea>
+            </div>
+
+            <button type="submit">שליחת הודעה</button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <a href="about.html">אודות האתר</a>
+        <p>המתכון המנצח © כל הזכויות שמורות 2026</p>
+    </footer>
+
+</body>
+</html>
