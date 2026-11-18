@@ -1,0 +1,135 @@
+/* הגדרות בסיסיות לכל האלמנטים */
+* {
+    box-sizing: border-box;
+}
+
+/* עיצוב כללי של גוף הדף */
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(241, 230, 232);
+    margin: 0;
+    padding: 1rem;
+}
+
+/* עיצוב טופס הוספת המתכון */
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* סידור השדות בטופס */
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* עיצוב התוויות וכותרות קבוצות השדות */
+.field > label,
+legend {
+    font-weight: bold;
+}
+
+/* עיצוב שדות הקלט ותיבות הטקסט */
+input:not([type="checkbox"], [type="radio"]),
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(246, 165, 178);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* סידור אפשרויות הבחירה */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* עיצוב אפשרויות הבחירה */
+.option {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* עיצוב מסגרת קבוצת השדות */
+fieldset {
+    border: 1px solid rgb(246, 165, 178);
+    border-radius: 6px;
+}
+
+/* עיצוב השדות כאשר לוחצים עליהם */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: rgb(246, 165, 178);
+    outline: 2px solid rgb(246, 165, 178);
+    outline-offset: 2px;
+}
+
+/* שינוי צבע כפתורי הרדיו ותיבות הסימון */
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: rgb(246, 165, 178);
+}
+
+/* סידור שדות הטופס בשורה או בעמודה */
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* עיצוב כפתור שליחת הטופס */
+button {
+    background: rgb(245, 150, 166);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    min-height: 44px;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* שינוי צבע הכפתור במעבר עכבר */
+button:hover {
+    background: rgb(246, 165, 178);
+}
+
+/* התאמת הטופס למסכים רחבים */
+@media (width >= 700px) {
+
+    /* הגדלת הרווח הפנימי של הטופס */
+    form {
+        padding: 2rem;
+    }
+
+    /* סידור השדות בשורה */
+    .row {
+        flex-direction: row;
+    }
+
+    /* חלוקת המקום בין השדות */
+    .row .field {
+        flex: 1;
+        min-width: 0;
+    }
+
+    /* מיקום הכפתור במרכז */
+    button {
+        width: auto;
+        align-self: center;
+    }
+}

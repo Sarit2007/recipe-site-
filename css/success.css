@@ -1,0 +1,76 @@
+/* עיצוב כללי של דף ההצלחה */
+.success-page {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+/* עיצוב התיבה המרכזית של הודעת ההצלחה */
+.success-box {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 3rem 2rem;
+    border: 1px solid rgb(246, 165, 178);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* עיצוב סמל ההצלחה */
+.success-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    background: rgb(248, 225, 229);
+    color: #713f4b;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* עיצוב הכותרת בתיבת ההצלחה */
+.success-box h1 {
+    color: #713f4b;
+    margin-bottom: 1rem;
+}
+
+/* עיצוב הטקסט בתיבת ההצלחה */
+.success-box p {
+    color: #555;
+    line-height: 1.8;
+}
+
+/* עיצוב כפתור המעבר */
+.success-box .button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 12px 22px;
+    background: rgb(245, 150, 166);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* שינוי צבע הכפתור במעבר עכבר */
+.success-box .button:hover {
+    background: rgb(246, 165, 178);
+}
+
+/* עיצוב הקישור לחזרה */
+.back-link {
+    display: block;
+    margin-top: 1.5rem;
+    color: #713f4b;
+    text-decoration: none;
+}
+
+/* הוספת קו תחתון לקישור במעבר עכבר */
+.back-link:hover {
+    text-decoration: underline;
+}

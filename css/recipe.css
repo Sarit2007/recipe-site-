@@ -1,0 +1,200 @@
+
+/* עיצוב כללי של דפי המתכונים */
+.recipe-page {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border: 1px solid rgb(246, 165, 178);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* עיצוב אזור הכותרת של המתכון */
+.recipe-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* עיצוב הכותרת הראשית של המתכון */
+.recipe-header h1 {
+    color: #713f4b;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+/* עיצוב הפסקה באזור הכותרת */
+.recipe-header p {
+    color: #666;
+    line-height: 1.8;
+}
+
+/* עיצוב תמונת המתכון */
+.recipe-image {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 2rem;
+    border-radius: 12px;
+}
+
+/* עיצוב אזור הפרטים על המתכון */
+.recipe-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgb(248, 225, 229);
+    border-radius: 10px;
+}
+
+/* עיצוב הטקסט בפרטי המתכון */
+.recipe-details p {
+    color: #713f4b;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* עיצוב הכותרות של חלקי המתכון */
+.recipe-page h2 {
+    color: #713f4b;
+    border-bottom: 2px solid rgb(246, 165, 178);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+/* עיצוב רשימת המצרכים */
+.ingredients-list {
+    line-height: 2;
+    color: #444;
+    padding-right: 1.5rem;
+}
+
+/* עיצוב רשימת הוראות ההכנה */
+.instructions-list {
+    line-height: 2;
+    color: #444;
+    padding-right: 1.5rem;
+}
+
+/* עיצוב הפריטים ברשימת הוראות ההכנה */
+.instructions-list li {
+    padding-right: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+/* התאמת דפי המתכונים למסכים קטנים */
+@media (max-width: 600px) {
+
+    /* התאמת הרווחים בדף */
+    .recipe-page {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    /* הקטנת הכותרת הראשית */
+    .recipe-header h1 {
+        font-size: 1.7rem;
+    }
+
+    /* התאמת גובה תמונת המתכון */
+    .recipe-image {
+        height: auto;
+    }
+
+    /* סידור פרטי המתכון בעמודה */
+    .recipe-details {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+}
+
+/* הסתרת הלוגו בתצוגה הרגילה */
+.print-logo {
+    display: none;
+}
+
+/* עיצוב כפתור הורדת המתכון */
+.download-button {
+    display: block;
+    width: fit-content;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+/* מיקום כפתור החזרה באמצע */
+.recipe-page > .button {
+    display: block;
+    width: fit-content;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+/* עיצוב המתכון בעת הדפסה או שמירה כ-PDF */
+@media print {
+
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    /* הסתרת חלקים שאינם נחוצים בקובץ */
+    header,
+    footer,
+    .download-button,
+    .recipe-page > .button {
+        display: none !important;
+    }
+
+    /* הסרת עיצוב הכרטיס החיצוני */
+    .recipe-page {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    /* הצגת הלוגו בקובץ */
+    .print-logo {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .print-logo img {
+        width: 150px;
+        height: auto;
+    }
+
+    /* הצגת תמונת המתכון במלואה ב-PDF */
+    .recipe-image {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto !important;
+        max-height: none;
+        object-fit: contain !important;
+        margin: 0 auto 2rem;
+        border-radius: 12px;
+    }
+
+    h2 {
+        break-after: avoid;
+    }
+
+    li {
+        break-inside: avoid;
+    }
+}

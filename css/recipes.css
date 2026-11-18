@@ -1,0 +1,130 @@
+/* עיצוב כללי של דף המתכונים */
+.recipes-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* עיצוב אזור הפתיחה */
+.recipes-intro {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgb(246, 165, 178);
+}
+
+/* עיצוב הכותרת הראשית */
+.recipes-intro h1 {
+    color: #713f4b;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+/* עיצוב הפסקה באזור הפתיחה */
+.recipes-intro p {
+    color: #555;
+    line-height: 1.8;
+}
+
+/* עיצוב כותרת רשימת המתכונים */
+.all-recipes h2 {
+    text-align: center;
+    color: #713f4b;
+    margin-bottom: 2rem;
+}
+
+/* סידור כרטיסי המתכונים */
+.recipes-page .recipes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* עיצוב כרטיסי המתכונים */
+.recipes-page .recipe-card {
+    background: white;
+    border: 1px solid rgb(246, 165, 178);
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 340px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+/* עיצוב תמונות המתכונים */
+.recipes-page .recipe-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+/* עיצוב אזור המידע בכרטיס */
+.recipe-info {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.8rem;
+}
+
+/* עיצוב כותרת המתכון */
+.recipe-info h3 {
+    color: #713f4b;
+    margin: 0;
+}
+
+/* עיצוב תיאור המתכון */
+.recipe-info p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* עיצוב פרטים נוספים על המתכון */
+.recipe-info span {
+    color: #8b6570;
+    font-size: 0.9rem;
+}
+
+/* עיצוב כפתור המעבר למתכון */
+.recipe-info .button {
+    text-align: center;
+    margin-top: auto;
+}
+
+
+/* אפקט מעבר עכבר על כרטיסי המתכונים */
+.recipes-page .recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* התאמת דף המתכונים למסכים בינוניים */
+@media (width >= 700px) {
+
+    .recipes-page {
+        padding: 2.5rem 1rem;
+    }
+
+    /* הצגת שני כרטיסים בשורה */
+    .recipes-page .recipe-card {
+        width: calc(50% - 1.5rem);
+    }
+
+}
+
+/* התאמת דף המתכונים למסכים גדולים */
+@media (width >= 1000px) {
+
+    /* הצגת שלושה כרטיסים בשורה */
+    .recipes-page .recipe-card {
+        width: calc(33.333% - 1.5rem);
+    }
+
+}

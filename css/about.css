@@ -1,0 +1,117 @@
+
+/* עיצוב כללי של דף האודות */
+.about {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border: 1px solid rgb(246, 165, 178);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* עיצוב הכותרת הראשית */
+.about h1 {
+    color: #713f4b;
+    font-size: 2.2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+/* עיצוב אזור הסיפור שלנו */
+.about-content {
+    background: rgb(248, 225, 229);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+/* עיצוב כותרת הסיפור שלנו */
+.about-content h2 {
+    color: #713f4b;
+    margin-top: 0;
+}
+
+/* עיצוב הפסקה */
+.about-content p {
+    color: #555;
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+/* עיצוב אזור היתרונות */
+.advantages h2 {
+    color: #713f4b;
+    margin-bottom: 1.5rem;
+}
+
+/* סידור כרטיסי היתרונות */
+.advantages-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* עיצוב כרטיסי היתרונות */
+.advantage-card {
+    background: white;
+    border: 1px solid rgb(246, 165, 178);
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: calc(50% - 1rem);
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* אפקט מעבר עכבר על הכרטיסים */
+.advantage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* עיצוב האייקונים */
+.advantage-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+}
+
+/* עיצוב כותרות הכרטיסים */
+.advantage-card h3 {
+    color: #713f4b;
+    margin: 0.5rem 0;
+}
+
+/* עיצוב הטקסט בכרטיסים */
+.advantage-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* התאמת דף האודות למסכים קטנים */
+@media (max-width: 600px) {
+
+    /* הקטנת הרווחים בדף */
+    .about {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    /* הקטנת הכותרת הראשית */
+    .about h1 {
+        font-size: 1.8rem;
+    }
+
+    /* התאמת אזור הסיפור */
+    .about-content {
+        padding: 1rem;
+    }
+
+    /* סידור כרטיסי היתרונות בעמודה */
+    .advantage-card {
+        width: 100%;
+    }
+}
